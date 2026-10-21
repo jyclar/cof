@@ -224,8 +224,8 @@ ul[role='list'], ol[role='list'] { list-style: none; padding: 0; }
 .visit__address { display: block; color: var(--color-text-inverse-muted); font-size: 0.9375rem; }
 .visit__directions { font-size: 0.9375rem; }
 .visit__directions li + li { margin-top: 2px; }
-.visit__maps { display: flex; flex-wrap: wrap; gap: 0 20px; }
-.visit__maps .link { display: inline-flex; align-items: center; min-height: 44px; }
+.visit__maps { font-size: 0.9375rem; }
+.visit__maps .link { display: inline-block; padding: 10px 2px; }
 .visit__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; }
 .visit__actions .link { display: inline-flex; align-items: center; min-height: 44px; }
 .visit__status:empty { display: none; }

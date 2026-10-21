@@ -190,10 +190,10 @@ Actions 탭에 빨간 X가 보이면 실패한 실행 → `build` → `Validate 
 ```json
 {
   "venueAddress": "서울특별시 강남구 강남대로 652 (신사동) 신사스퀘어 4층",
-  "directions": ["지하철 3호선·신분당선 신사역 인근", "한남대교 남단, 더 리버사이드호텔 맞은편 신사스퀘어 건물"],
+  "directions": ["신사역(3호선, 신분당선) 6번 출구 353m, 공연 관련 2시간 주차 가능"],
   "maps": [
-    { "label": "네이버 지도", "url": "https://map.naver.com/p/search/거암아트홀" },
-    { "label": "카카오맵", "url": "https://map.kakao.com/?q=거암아트홀" }
+    { "label": "네이버", "url": "https://map.naver.com/p/search/거암아트홀" },
+    { "label": "카카오", "url": "https://map.kakao.com/?q=거암아트홀" }
   ],
   "ticketUrl": null,
   "admission": null,
@@ -201,7 +201,7 @@ Actions 탭에 빨간 X가 보이면 실패한 실행 → `build` → `Validate 
 }
 ```
 
-주소 출처: 공연 예매 페이지의 장소 정보(강남대로 652, 신사동)와 언론 보도(신사역 인근 신사스퀘어 4층). 지하철 출구 번호·도보 시간처럼 확인되지 않은 정보는 넣지 않았습니다. 공연장에서 공식 안내를 받으면 `directions`에 덧붙이세요.
+`directions`의 각 항목은 ‘찾아오는 길’에 한 줄씩 표시되고, `maps`는 ‘지도: 네이버, 카카오’처럼 이어서 표시됩니다.
 주소와 지도 링크는 공연장 공식 안내와 대조한 뒤에 넣습니다. 확인되지 않은 정보는 넣지 않습니다.
 
 ## 7. 개발자용

@@ -69,7 +69,7 @@ await rm(TMP, { recursive: true, force: true });
   check('빈 자료: 일정 파일 생성', existsSync(path.join(r.out, 'assets/downloads/concert.ics')));
   const ics = r.ok ? await readFile(path.join(r.out, 'assets/downloads/concert.ics'), 'utf8') : '';
   check('일정 파일: 시작 시각 KST 19:30 = UTC 10:30, 종료 시각 없음', ics.includes('DTSTART:20261111T103000Z') && !ics.includes('DTEND'));
-  check('찾아오는 길: 주소·안내·지도 링크', r.html?.includes('<dt>찾아오는 길</dt>') && r.html.includes('강남대로 652') && r.html.includes('신사역') && r.html.includes('href="https://map.naver.com/p/search/') && r.html.includes('카카오맵에서 보기'));
+  check('찾아오는 길: 주소·안내·지도 링크', r.html?.includes('<dt>찾아오는 길</dt>') && r.html.includes('강남대로 652') && r.html.includes('신사역(3호선, 신분당선) 6번 출구 353m, 공연 관련 2시간 주차 가능') && !r.html.includes('리버사이드') && r.html.includes('href="https://map.naver.com/p/search/') && /<p class="visit__maps">지도: <a [^>]+>네이버<span class="sr-only"> 지도 \(새 창\)<\/span><\/a>, <a [^>]+>카카오</.test(r.html));
   check('구조화 데이터: 주소', r.html?.includes('"streetAddress":"서울특별시 강남구 강남대로 652'));
   check('일정 파일: 장소에 주소 포함', ics.replace(/\r\n /g, '').includes('LOCATION:거암아트홀\\, 서울특별시 강남구 강남대로 652'));
   check('일정 파일: 75바이트 이하로 줄 접기', ics.split('\r\n').every((l) => Buffer.byteLength(l) <= 75));

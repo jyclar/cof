@@ -673,7 +673,7 @@ async function main() {
     directions: [
       site.directions.length ? `<ul class="visit__directions" role="list">${site.directions.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>` : '',
       site.maps.length
-        ? `<p class="visit__maps">${site.maps.map((m) => `<a class="link link--inverse" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.label)}에서 보기<span class="sr-only"> (새 창)</span></a>`).join('')}</p>`
+        ? `<p class="visit__maps">지도: ${site.maps.map((m) => `<a class="link link--inverse" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.label)}<span class="sr-only"> 지도 (새 창)</span></a>`).join(', ')}</p>`
         : '',
     ].join(''),
     'ticket-url': esc(site.ticketUrl),

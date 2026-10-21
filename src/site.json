@@ -1,16 +1,15 @@
 {
   "venueAddress": "서울특별시 강남구 강남대로 652 (신사동) 신사스퀘어 4층",
   "directions": [
-    "지하철 3호선·신분당선 신사역 인근",
-    "한남대교 남단, 더 리버사이드호텔 맞은편 신사스퀘어 건물"
+    "신사역(3호선, 신분당선) 6번 출구 353m, 공연 관련 2시간 주차 가능"
   ],
   "maps": [
     {
-      "label": "네이버 지도",
+      "label": "네이버",
       "url": "https://map.naver.com/p/search/%EA%B1%B0%EC%95%94%EC%95%84%ED%8A%B8%ED%99%80"
     },
     {
-      "label": "카카오맵",
+      "label": "카카오",
       "url": "https://map.kakao.com/?q=%EA%B1%B0%EC%95%94%EC%95%84%ED%8A%B8%ED%99%80"
     }
   ],
