@@ -1,0 +1,64 @@
+# content/ 또는 src/가 바뀌면 검증 → 사진 최적화·HTML 생성 → GitHub Pages 배포
+# 빌드가 실패하면 배포 작업은 실행되지 않으며, 공개 사이트는 마지막 정상 버전을 유지한다.
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# 동시에 여러 번 커밋해도 배포는 순서대로 하나씩 진행하고, 대기 중인 오래된 실행은 최신 실행으로 대체된다.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Get Pages URL
+        id: pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Validate content and build site
+        run: npm run build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+
+      - name: Upload site
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

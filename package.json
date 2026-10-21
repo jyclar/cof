@@ -1,0 +1,20 @@
+{
+  "name": "circle-of-friends",
+  "version": "1.0.0",
+  "private": true,
+  "description": "이재용 클라리넷 독주회 Circle of Friends 공연 안내·기록 사이트",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs",
+    "serve": "node scripts/serve.mjs",
+    "prepare-assets": "node scripts/prepare-brochure-assets.mjs"
+  },
+  "dependencies": {
+    "@fontsource/noto-serif-kr": "5.3.1",
+    "sharp": "0.35.5"
+  }
+}
