@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": "bozza-aria",
+    "title": "Bozza, Aria",
+    "youtubeUrl": "https://youtu.be/LbDb2DstwW8",
+    "category": "piece",
+    "date": "2026-11-11",
+    "workId": "bozza-aria",
+    "order": 10,
+    "published": true
+  },
+  {
+    "id": "mozart-kegelstatt",
+    "title": "Mozart, Clarinet Trio in E-flat major, K. 498 “Kegelstatt”",
+    "youtubeUrl": "https://youtu.be/H6jgidI5Wp0",
+    "category": "piece",
+    "date": "2026-11-11",
+    "workId": "mozart-k498",
+    "order": 20,
+    "published": true
+  },
+  {
+    "id": "babin-hillandale-waltzes",
+    "title": "Babin, Hillandale Waltzes",
+    "youtubeUrl": "https://youtu.be/hHXYZ5-AJKA",
+    "category": "piece",
+    "date": "2026-11-11",
+    "workId": "babin-hillandale",
+    "order": 30,
+    "published": true
+  },
+  {
+    "id": "schumann-drei-romanzen",
+    "title": "Schumann, Drei Romanzen, Op. 94",
+    "youtubeUrl": "https://youtu.be/4D9yTBSHtNs",
+    "category": "piece",
+    "date": "2026-11-11",
+    "workId": "schumann-op94",
+    "order": 40,
+    "published": true
+  },
+  {
+    "id": "mangani-tre-danze-latine",
+    "title": "Mangani, Tre Danze Latine",
+    "youtubeUrl": "https://youtu.be/VpkOQEdF1Vc",
+    "category": "piece",
+    "date": "2026-11-11",
+    "workId": "mangani-danze-latine",
+    "order": 50,
+    "published": true
+  },
+  {
+    "id": "kim-taewon-never-ending-story",
+    "title": "김태원, Never Ending Story",
+    "youtubeUrl": "https://youtu.be/xr41xeJ8q8o",
+    "category": "piece",
+    "date": "2026-11-11",
+    "workId": "kim-never-ending-story",
+    "order": 60,
+    "published": true
+  }
+]
