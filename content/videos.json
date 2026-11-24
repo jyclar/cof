@@ -7,7 +7,7 @@
     "date": "2026-11-11",
     "workId": "bozza-aria",
     "order": 10,
-    "published": true
+    "published": false
   },
   {
     "id": "mozart-kegelstatt",
@@ -17,7 +17,7 @@
     "date": "2026-11-11",
     "workId": "mozart-k498",
     "order": 20,
-    "published": true
+    "published": false
   },
   {
     "id": "babin-hillandale-waltzes",
@@ -27,7 +27,7 @@
     "date": "2026-11-11",
     "workId": "babin-hillandale",
     "order": 30,
-    "published": true
+    "published": false
   },
   {
     "id": "schumann-drei-romanzen",
@@ -37,7 +37,7 @@
     "date": "2026-11-11",
     "workId": "schumann-op94",
     "order": 40,
-    "published": true
+    "published": false
   },
   {
     "id": "mangani-tre-danze-latine",
@@ -57,6 +57,6 @@
     "date": "2026-11-11",
     "workId": "kim-never-ending-story",
     "order": 60,
-    "published": true
+    "published": false
   }
 ]
