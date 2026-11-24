@@ -435,11 +435,12 @@ function renderVideos(videos) {
       const meta = [VIDEO_CATEGORIES[v.category], v.date ? `<time datetime="${v.date}">${formatDate(v.date)} 촬영</time>` : '']
         .filter(Boolean)
         .join(' · ');
+      // 대표 이미지가 없으면 제목을 되풀이하는 상자 대신 제목·버튼만 보여 준다.
       const poster = v.poster
-        ? `<img src="assets/gallery/${v.poster}" alt="" width="960" height="540" loading="lazy" decoding="async">`
-        : `<span class="video-card__panel" aria-hidden="true"><span>${esc(v.title)}</span></span>`;
-      return `<li class="video-card${v.featured ? ' video-card--featured' : ''}" id="video-${v.id}" data-category="${v.category}">
-            <div class="video-card__poster">${poster}</div>
+        ? `<div class="video-card__poster"><img src="assets/gallery/${v.poster}" alt="" width="960" height="540" loading="lazy" decoding="async"></div>`
+        : '';
+      return `<li class="video-card${v.featured ? ' video-card--featured' : ''}${v.poster ? '' : ' video-card--text'}" id="video-${v.id}" data-category="${v.category}">
+            ${poster}
             <div class="video-card__body">
               <h3 class="video-card__title">${esc(v.title)}</h3>
               <p class="video-card__meta">${meta}</p>

@@ -398,12 +398,11 @@ details[open] > summary::before { transform: rotate(45deg); }
 }
 .video-card__poster { aspect-ratio: 16 / 9; overflow: hidden; background: var(--color-surface-dark); }
 .video-card__poster img { width: 100%; height: 100%; object-fit: cover; }
-.video-card__panel {
-  display: flex; align-items: flex-end; height: 100%; padding: var(--card-pad);
-  background: linear-gradient(135deg, var(--color-surface-dark) 0%, var(--color-bg-dark) 70%);
-  border: 1px solid #3a3a3a; border-top: 2px solid var(--color-gold);
-  font-family: var(--font-serif); font-size: 1.25rem; line-height: 1.45; color: var(--color-gold);
-}
+/* 대표 이미지 없는 카드: 얇은 구분선 아래 제목·정보·버튼만 둔다. */
+.videos:has(.video-card--text) { row-gap: 0; }
+@media (min-width: 768px) { .videos:has(.video-card--text) { column-gap: 48px; } }
+.video-card--text { gap: 0; padding: 24px 0 20px; border-top: 1px solid #3a3a3a; }
+.video-card--text .video-card__actions { margin-top: 14px; }
 .video-card__title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; line-height: 1.45; }
 .video-card__meta { font-size: 0.875rem; color: var(--color-text-inverse-muted); }
 .video-card__desc { margin-top: 6px; font-size: 0.9375rem; }
